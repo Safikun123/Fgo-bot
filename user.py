@@ -562,7 +562,7 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
     def lq003(self):
         # https://game.fate-go.jp/shop/purchase
         
-        url = 'https://git.atlasacademy.io/atlasacademy/fgo-game-data/raw/branch/JP/master/mstShop.json'
+        url = 'https://git.atlasacademy.io/atlasacademy/fgo-game-data/raw/branch/NA/master/mstShop.json'
         response = requests.get(url)
         fdata = response.json()
         max_base_shop_id = None
@@ -731,7 +731,7 @@ xCGlz9vV3+AAQ31C2phoyd/QhvpL85p39n6Ibg==
     
     def Present(self):
         #素材交換券
-        response = requests.get("https://api.atlasacademy.io/export/JP/nice_item.json")
+        response = requests.get("https://api.atlasacademy.io/export/NA/nice_item.json")
         if response.status_code == 200:
             with open("nice_item.json", 'wb') as f:
                 f.write(response.content)
