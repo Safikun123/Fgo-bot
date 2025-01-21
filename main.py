@@ -14,7 +14,7 @@ webhook_discord_url = os.environ['webhookDiscord']
 device_info = os.environ.get('DEVICE_INFO_SECRET')
 appCheck = os.environ.get('APP_CHECK_SECRET')
 user_agent_2 = os.environ.get('USER_AGENT_SECRET_2')
-fate_region = 'JP'
+fate_region = 'NA'
 
 userNums = len(userIds)
 authKeyNums = len(authKeys)
@@ -24,14 +24,14 @@ logger = logging.getLogger("FGO Daily Login")
 coloredlogs.install(fmt='%(asctime)s %(name)s %(levelname)s %(message)s')
 
 def get_latest_verCode():
-    endpoint = "https://raw.githubusercontent.com/DNNDHH/FGO-VerCode-extractor/JP/VerCode.json"
+    endpoint = "https://raw.githubusercontent.com/O-Isaac/FGO-VerCode-extractor/NA/VerCode.json"
     response = requests.get(endpoint).text
     response_data = json.loads(response)
 
     return response_data['verCode']
     
 def get_latest_appver():
-    endpoint = "https://raw.githubusercontent.com/DNNDHH/FGO-VerCode-extractor/JP/VerCode.json"
+    endpoint = "https://raw.githubusercontent.com/O-Isaac/FGO-VerCode-extractor/NA/VerCode.json"
     response = requests.get(endpoint).text
     response_data = json.loads(response)
 
